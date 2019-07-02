@@ -1,0 +1,24 @@
+﻿@model Record
+
+@{
+    ViewData["Title"] = "RecordDelete";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<br />
+<div class="card shadow mb-4 text-center">
+    <div class="card-header py-3">
+        <h4 class="m-0 font-weight-bold text-primary">Delete Record Screen</h4>
+    </div>
+    <div class="card-body">
+        Do you really want to delete this record? <br />
+        Username: @Model.Username <br />
+        Password: @Model.Password <br />
+        Social Media: @Model.MediaName <br />
+        <hr />
+        <form asp-controller="Panel" asp-action="RecordDelete" method="post" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete Record</button>
+        </form>
+
+    </div>
+</div>

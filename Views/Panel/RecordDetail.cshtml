@@ -1,0 +1,42 @@
+﻿@model Record
+@{
+    ViewData["Title"] = "RecordDetail";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<div class="card">
+    <div class="card-heading border bottom">
+        <br />
+        <h4 class="card-title text-center">Record Detail</h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-9 ml-auto mr-auto">
+                <form asp-controller="" asp-action="" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" asp-for="Username" value="@Model.Username" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" class="form-control" asp-for="Password" value="@Model.Password" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Social Media Name</label>
+                        <input type="text" class="form-control" asp-for="MediaName" value="@Model.MediaName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Created Date</label>
+                        <input type="text" class="form-control" asp-for="CreatedDate" value="@Model.CreatedDate" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Created Ip</label>
+                        <input type="text" class="form-control" asp-for="CreatedIp" value="@Model.CreatedIp" readonly>
+                    </div>
+                </form>
+                <center><a href="javascript:history.back()" class="btn btn-primary"><i class="fa fa-backward" aria-hidden="true"></i> Back Page</a></center><br />
+            </div>
+        </div>
+    </div>
+</div>
+

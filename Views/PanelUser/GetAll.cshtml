@@ -1,0 +1,75 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<script src="~/TemplateAdmin/Js/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#myTable').dataTable();
+    });
+</script>
+
+<div class="container-fluid">
+    @if (Model.Count() > 0)
+    {
+        <a href="/PanelUser/Add/" class="btn btn-info" style="margin-bottom:10px;"><i class="fa fa-plus" aria-hidden="true"></i> Add New User</a>
+        <!-- Verileri Listeleme -->
+        <div class="card mb-3 text-center">
+            <div class="card-header">
+                <i class="fas fa-table"></i>
+                User List
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Controls</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @if (item.Username.Length > 30)
+                                        {
+                                            @item.Username.Substring(0, 30)<span>...</span>
+                                        }
+                                        else
+                                        {
+                                            @item.Username
+                                        }
+                                    </td>
+                                    <td>
+                                        <a href="/PanelUser/GetById/@item.Id" class="btn btn-info btn-sm"><i class="fa fa-search" aria-hidden="true"></i> Read</a>
+                                        <a href="/PanelUser/Update/@item.Id" class="btn btn-success btn-sm"><i class="fa fa-edit" aria-hidden="true"></i> Update</a>
+                                        <a href="/PanelUser/Delete/@item.Id" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer small text-muted">Last Updated : @DateTime.Now</div>
+        </div>
+
+    }
+    else
+    {
+        <div class="card mb-3 text-center">
+            <div class="card-header">
+                <i class="fas fa-table"></i>
+                Veri Bulunamadı
+            </div>
+            <div class="card-body">
+                Eklenmiş Herhangi Bir Veri Bulunamadı...
+            </div>
+        </div>
+    }
+</div>
+

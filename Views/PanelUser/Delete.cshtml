@@ -1,0 +1,38 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<div class="card">
+    <div class="card-heading border bottom">
+        <br />
+        <h4 class="card-title text-center">Delete User</h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-9 ml-auto mr-auto">
+                <form asp-controller="PanelUser" asp-action="Delete" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" asp-for="Username" value="@Model.Username" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" class="form-control" asp-for="Password" value="@Model.Password" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Is This User In Admin ?</label>
+                        <input type="text" class="form-control" asp-for="IsAdmin" value="@Model.IsAdmin" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>User Api Key</label>
+                        <input type="text" class="form-control" asp-for="ApiKey" value="@Model.ApiKey" readonly>
+                    </div>
+                    <center><button type="submit" class="btn btn-danger"><i class="fa fa-plus" aria-hidden="true"></i> Delete User</button></center><br />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
