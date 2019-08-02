@@ -110,5 +110,36 @@ namespace FakerSocialMedia.Controllers
             return View();
         }
 
+        [Route("~/github")]
+        public IActionResult Github()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("~/github")]
+        public IActionResult Github(Record record)
+        {
+            if (record.Username != null && record.Password != null)
+            {
+                if (record.Username.Length > 1 && record.Password.Length > 1)
+                {
+                    record.CreatedDate = DateTime.Now.ToShortDateString();
+                    record.CreatedDay = DateTime.Now.Day;
+                    record.CreatedWeek = DateTime.Now.DayOfYear / 7;
+                    record.CreatedMonth = DateTime.Now.Month;
+                    record.CreatedYear = DateTime.Now.Year;
+                    record.CreatedIp = HttpContext.Connection.RemoteIpAddress.ToString();
+                    record.MediaName = "Github";
+
+                    recordOperations.AddModel(record);
+                    return View();
+                }
+                return View();
+            }
+
+            return View();
+        }
+
     }
 }

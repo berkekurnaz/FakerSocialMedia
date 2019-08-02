@@ -31,6 +31,7 @@ Social Media Name | Url | Is Active | Stable Version
 Facebook | `www.yoursite.com/facebook` | **Yes** | **Yes**
 Twitter | `www.yoursite.com/twitter` | **Yes** | **Yes**
 Instagram | `www.yoursite.com/instagram` | **Yes** | **Yes**
+Github | `www.yoursite.com/github` | **Yes** | **Test Version**
 
 ## Versions
 

@@ -8,3 +8,4 @@ D:\YazilimProjeleri2019\FakerSocialMedia\FakerSocialMedia\obj\Debug\netcoreapp2.
 D:\YazilimProjeleri2019\FakerSocialMedia\FakerSocialMedia\bin\Debug\netcoreapp2.0\FakerSocialMedia.pdb
 D:\YazilimProjeleri2019\FakerSocialMedia\FakerSocialMedia\obj\Debug\netcoreapp2.0\FakerSocialMedia.dll
 D:\YazilimProjeleri2019\FakerSocialMedia\FakerSocialMedia\obj\Debug\netcoreapp2.0\FakerSocialMedia.pdb
+D:\YazilimProjeleri2019\FakerSocialMedia\FakerSocialMedia\obj\Debug\netcoreapp2.0\FakerSocialMedia.csprojAssemblyReference.cache
