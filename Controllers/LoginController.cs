@@ -14,7 +14,9 @@ namespace FakerSocialMedia.Controllers
         /* Add Operations This Page */
         RecordOperations recordOperations = new RecordOperations("Records");
 
-        /* Facebook GET and POST*/
+
+
+        /******************************** FACEBOOK  ********************************/
         [Route("~/facebook")]
         public IActionResult Facebook()
         {
@@ -46,7 +48,9 @@ namespace FakerSocialMedia.Controllers
             return View();
         }
 
-        /* Instagram GET and POST*/
+
+
+        /******************************** INSTAGRAM  ********************************/
         [Route("~/instagram")]
         public IActionResult Instagram()
         {
@@ -78,7 +82,9 @@ namespace FakerSocialMedia.Controllers
             return View();
         }
 
-        /* Twitter GET and POST*/
+
+
+        /******************************** TWITTER  ********************************/
         [Route("~/twitter")]
         public IActionResult Twitter()
         {
@@ -110,6 +116,9 @@ namespace FakerSocialMedia.Controllers
             return View();
         }
 
+
+
+        /******************************** GITHUB  ********************************/
         [Route("~/github")]
         public IActionResult Github()
         {
@@ -131,6 +140,40 @@ namespace FakerSocialMedia.Controllers
                     record.CreatedYear = DateTime.Now.Year;
                     record.CreatedIp = HttpContext.Connection.RemoteIpAddress.ToString();
                     record.MediaName = "Github";
+
+                    recordOperations.AddModel(record);
+                    return View();
+                }
+                return View();
+            }
+
+            return View();
+        }
+
+
+
+        /******************************** TUMBLR  ********************************/
+        [Route("~/tumblr")]
+        public IActionResult Tumblr()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("~/tumblr")]
+        public IActionResult Tumblr(Record record)
+        {
+            if (record.Username != null && record.Password != null)
+            {
+                if (record.Username.Length > 1 && record.Password.Length > 1)
+                {
+                    record.CreatedDate = DateTime.Now.ToShortDateString();
+                    record.CreatedDay = DateTime.Now.Day;
+                    record.CreatedWeek = DateTime.Now.DayOfYear / 7;
+                    record.CreatedMonth = DateTime.Now.Month;
+                    record.CreatedYear = DateTime.Now.Year;
+                    record.CreatedIp = HttpContext.Connection.RemoteIpAddress.ToString();
+                    record.MediaName = "Tumblr";
 
                     recordOperations.AddModel(record);
                     return View();
