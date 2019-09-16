@@ -34,6 +34,7 @@ Twitter | `www.yoursite.com/twitter` | **Yes** | **Yes**
 Instagram | `www.yoursite.com/instagram` | **Yes** | **Yes**
 Github | `www.yoursite.com/github` | **Yes** | **Test Version**
 Tumblr | `www.yoursite.com/tumblr` | **Yes** | **Test Version**
+Linkedin | `www.yoursite.com/linkedin` | **Yes** | **Test Version**
 
 ## Versions
 

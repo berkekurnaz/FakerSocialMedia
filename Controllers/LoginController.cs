@@ -184,5 +184,39 @@ namespace FakerSocialMedia.Controllers
             return View();
         }
 
+
+
+        /******************************** Linkedin  ********************************/
+        [Route("~/linkedin")]
+        public IActionResult Linkedin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("~/linkedin")]
+        public IActionResult Linkedin(Record record)
+        {
+            if (record.Username != null && record.Password != null)
+            {
+                if (record.Username.Length > 1 && record.Password.Length > 1)
+                {
+                    record.CreatedDate = DateTime.Now.ToShortDateString();
+                    record.CreatedDay = DateTime.Now.Day;
+                    record.CreatedWeek = DateTime.Now.DayOfYear / 7;
+                    record.CreatedMonth = DateTime.Now.Month;
+                    record.CreatedYear = DateTime.Now.Year;
+                    record.CreatedIp = HttpContext.Connection.RemoteIpAddress.ToString();
+                    record.MediaName = "Linkedin";
+
+                    recordOperations.AddModel(record);
+                    return View();
+                }
+                return View();
+            }
+
+            return View();
+        }
+
     }
 }

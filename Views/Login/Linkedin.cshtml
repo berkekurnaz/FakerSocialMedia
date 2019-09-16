@@ -1,0 +1,56 @@
+﻿@model Record
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
+    <title>Linkedin</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://www.bootstrapzen.com/wp-content/uploads/427/preview/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/TemplateLogin/Linkedin/style.css" />
+
+</head>
+<body>
+
+    <section class="container login-form">
+        <section>
+            <form asp-controller="Login" asp-action="Linkedin" method="post" enctype="multipart/form-data" role="login">
+                <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG34.png" alt="" class="img-responsive" />
+
+                <div class="form-group">
+                    <input asp-for="Username" type="text" required class="form-control" placeholder="Email address" />
+                </div>
+
+                <div class="input-group">
+                    <input asp-for="Password" type="password" required class="form-control" placeholder="Password" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="tooltip" data-toggle="tooltip" data-placement="top" title="Forgot password ?">?</button>
+                    </span>
+                </div>
+
+                <input type="submit" value="Log in" class="btn btn-primary btn-block" />
+
+                Not yet a member ? <a href="#">Register now</a>
+            </form>
+        </section>
+    </section>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+	<!--
+	$( document ).ready(function() {
+	    $('#tooltip').tooltip();
+	});
+	-->
+    </script>
+
+</body>
+</html>
